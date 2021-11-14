@@ -3,16 +3,21 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
     googleId: {
         type: String,
-        required: true
+    },
+    facebookId: {
+        type: String
     },
     displayName: {
         type: String,
+        required: true
     },
     firstName: {
         type: String,
+        required: true
     },
     lastName: {
         type: String,
+        required: true
     },
     image: {
         type: String
@@ -24,6 +29,9 @@ const UserSchema = new mongoose.Schema({
         type: Number
     },
     filePath: {
+        type: String
+    },
+    password: {
         type: String
     },
     createdAt: {

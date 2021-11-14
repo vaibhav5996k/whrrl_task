@@ -1,16 +1,48 @@
 h5 {
     text-align: start;
-    margin-left: 40px;
+    margin-left: 30px;
     padding-top: 10px;
+    margin-top: 20px;
+    color: rgb(92, 92, 92);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.5cm;
 }
 
-.row-image {
-    height: 30%;
-    width: 40px;
+h6 {
+    color: rgb(92, 92, 92);
+    margin-left: -110px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.5cm;
+}
+
+.pure-u-1 {
+    padding-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.dash-image {
+    margin-left: 0px;
+    border-radius: 10px;
+}
+
+.form-container {
+    margin-left: 70px;
+}
+
+.card {
+    margin-left: -50px;
+}
+
+.card-dashboard {
+    align-items: center;
+    margin-top: -30px;
+    margin-left: 190px;
+    margin-right: 190px;
 }
 
 .login-container {
-    width: 550px;
+    width: 500px;
     margin-top: 50px;
     text-align: center;
 }
@@ -19,6 +51,7 @@ h5 {
     width: 550px;
     margin-top: 50px;
     text-align: center;
+    align-items: center;
 }
 
 .nav-wrapper {
@@ -51,4 +84,9 @@ h5 {
 
 .fas {
     margin-left: 10px;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
 }

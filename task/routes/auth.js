@@ -22,12 +22,12 @@ router.get('/logout', (req, res) => {
 
 
 
-// auth with google 
-// get auth/google
-router.get('/facebook', passport.authenticate('facebook', { scope: ['profile'] }))
+// auth with facebook 
+// get auth/facebook
+router.get('/facebook', passport.authenticate('facebook'))
 
-// google auth callback
-// get auth/google/callback
+// facebook auth callback
+// get auth/facebook/callback
 router.get('/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/' }),
     (req, res) => {
         res.redirect('/dashboard')

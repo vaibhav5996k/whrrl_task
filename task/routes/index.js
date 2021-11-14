@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { ensureAuth, ensureGuest } = require('../middleware/auth')
+const UserController = require('../controllers/User_Controller')
+const { ensureAuth, ensureGuest, vToken } = require('../middleware/auth')
 
 // login page
 router.get('/', ensureGuest, (req, res) => {
@@ -9,9 +10,28 @@ router.get('/', ensureGuest, (req, res) => {
     })
 })
 
+//register page
+router.get('/register', (req, res) => {
+    res.render('register', {
+        layout: 'register'
+    })
+})
+
 // dashboard
 router.get('/dashboard', ensureAuth, (req, res) => {
     res.render('dashboard', { fullname: req.user.displayName, imgurl: req.user.image })
+})
+
+
+//register user route
+router.post('/register', UserController.createNewUser, (req, res) => {
+    res.render('/', alert("sucessfully registered"))
+})
+
+
+//User login
+router.post('/ulogin', UserController.userLogin, (req, res) => {
+    res.render('dashboard', { fullname: req.user.displayName })
 })
 
 module.exports = router

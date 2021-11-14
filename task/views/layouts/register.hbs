@@ -4,28 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User</title>
+    <title>User Registration</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
         integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
-        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
-
+    <link rel="stylesheet" href="/css/reg_style.css">
 </head>
 
 <body>
-    {{> _header}}
-    <div class="container">{{{body}}}</div>
+
+    <div class="container register-container">
+        <div class="register">
+            <div class="card-content">{{{body}}}</div>
+        </div>
+    </div>
 
 
+    <script>const button = document.querySelector('.btn')
+        const form = document.querySelector('.form')
+
+        button.addEventListener('click', function () {
+            form.classList.add('form--no')
+        });</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        M.Sidenav.init(document.querySelector('.sidenav'))
-    </script>
 </body>
 
 </html>
