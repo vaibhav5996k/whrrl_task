@@ -1,17 +1,18 @@
 <h5> <b> Welcome,</b></h5>
-<div class="container">
-    <label for="emailId"><b>Email ID</b></label>
-    <input type="text" placeholder="Enter Email ID" name="emailId" required>
+<form action="/login" method="POST">
+    <div class="container">
+        <label for="emailId"><b>Email ID</b></label>
+        <input type="text" class="form-control" placeholder="Enter Email ID" name="emailId" required>
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
 
-    <button class="btn black" type="submit"><a href="/ulogin"> Login</a></button>
-    <div class="devider">-----------------------------</div>
-    <a href="/register" class="btn black">
-        <i class="fab fa-register"></i>Register
-    </a>
-</div>
+        <button class="btnLogin black" type="submit" value="User"> Login</button>
+        <div class="devider">-----------------------------</div>
+        <a href="/register" class="btn black">
+            <i class="fab fa-register"></i>Register
+        </a>
+    </div>
 </form>
 <div class="section">
     <a href="/auth/facebook" class="btn blue darken-3">

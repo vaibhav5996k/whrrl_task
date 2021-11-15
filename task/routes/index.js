@@ -24,14 +24,13 @@ router.get('/dashboard', ensureAuth, (req, res) => {
 
 
 //register user route
-router.post('/register', UserController.createNewUser, (req, res) => {
-    res.render('/', alert("sucessfully registered"))
-})
+router.post('/register', UserController.createNewUser)
 
 
 //User login
-router.post('/ulogin', UserController.userLogin, (req, res) => {
-    res.render('dashboard', { fullname: req.user.displayName })
-})
+router.post('/login', UserController.userLogin)
+
+
+
 
 module.exports = router

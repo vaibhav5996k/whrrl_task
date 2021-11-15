@@ -1,5 +1,6 @@
 const express = require('express')
 const passport = require('passport')
+const UserController = require('../controllers/User_Controller')
 const router = express.Router()
 
 // auth with google 
@@ -33,6 +34,10 @@ router.get('/facebook/callback', passport.authenticate('facebook', { failureRedi
         res.redirect('/dashboard')
     })
 
-
+router.get('/register', (req, res) => {
+    res.render('register', {
+        layout: 'register'
+    })
+})
 
 module.exports = router

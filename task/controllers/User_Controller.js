@@ -28,7 +28,7 @@ module.exports = {
                         password: hasedPassword
                     });
                     const result = await user.save();
-                    res.status(200).render("login");
+                    resres.render('/');
                 }
             });
         } catch (error) {
@@ -46,6 +46,6 @@ module.exports = {
             return res.status(400).send('Invalid password')
         }
         const token = jwt.sign({ _id: user.id }, process.env.TOKEN_SECRET)
-        res.header('auth-token', token).send(token)
+        res.header('auth-token', token).render('dashboard')
     }
 }
